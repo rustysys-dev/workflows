@@ -1,4 +1,4 @@
-name: 'Setup Golang for Actions'
+name: "Setup Golang for Actions"
 description: Composite Golang and cache setup
 author: Scott Mattan (Rusty)
 branding:
@@ -21,12 +21,11 @@ inputs:
 runs:
   using: "composite"
   steps:
-
-    - uses: actions/setup-go@v3
+    - uses: actions/setup-go@v5
       with:
         go-version: ${{ inputs.go-version }}
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: ${{ inputs.path }}
         key: ${{ inputs.key }}
